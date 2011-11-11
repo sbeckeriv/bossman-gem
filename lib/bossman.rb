@@ -14,11 +14,14 @@ require 'bossman/search'
 
 module BOSSMan
   API_VERSION = :v1
-  API_BASEURI = "http://boss.yahooapis.com/ysearch"
+  API_BASEURI = "http://yboss.yahooapis.com/ysearch"
 
   attr_accessor :application_id
   module_function :application_id, :application_id=
-
+  attr_accessor :consumer_key
+  module_function :consumer_key, :consumer_key=  
+  attr_accessor :consumer_secret
+  module_function :consumer_secret, :consumer_secret=
   class MissingConfiguration < StandardError; end
   class BOSSError < StandardError; end
 end
